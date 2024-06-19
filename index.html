@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper credit-card-container">
+      <div class="card-1 card-front">
+        <img src="card-logo.svg" alt="">
+        <h1 class="card-front-numb"><span class="numb-1">0000</span> <span class="numb-2">0000</span> <span
+          class="numb-3">0000</span> <span class="numb-4">0000</span></h1>
+        <div>
+          <p class="card-front-name">Jane Appleseed</p><p><span class="exp-month">00</span>/<span class="exp-year">00</span></p>
+        </div>
+      </div>
+      <div class="card-2 card-back">
+        <p class="card-back-num">000</p>
+      </div>
+    </div>
+    <div class="form form-state">
+      <div class="wrapper-1 user-input">
+        <label for="user-name">Cardholder Name</label>
+        <input type="text" id="user-name" maxlength="24" placeholder="e.g. Jane Appleseed">
+      </div>
+      <div class="wrapper-1 user-input">
+        <label for="user-card">Card Number</label>
+        <input id="user-card" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+      </div>
+      <div class="sub-wrapper">
+        <div class="sub-wrapper-1 user-input">
+            <label for="date-exp-mm">EXP. DATE (MM/YY)</label>
+            <div class="user-input-date">
+              <div class="date month">
+                <input id="date-exp-mm" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="2"
+                  placeholder="MM">
+              </div>
+              <div class="date year">
+                <input id="date-exp-yy" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="2"
+                  placeholder="YY">
+              </div>
+            </div>
+        </div>
+        <div  class="sub-wrapper-2 user-input">
+          <label for="user-cvc">CVC</label>
+          <input id="user-cvc" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="3" placeholder="e.g. 123">
+        </div>
+      </div>
+      <button class="btn" id="btn-form">Confirm</button>
+    </div>
+
+    <!-- Pop up Message -->
+    <section class="container-2 completed-state-container hidden">
+      <img src="icon-complete.svg" alt="">
+      <h1>THANK YOU!</h1>
+      <p>We've added you card details</p>
+      <button type="submit" id="btn-completed" class="btns m-t">Continue</button>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/rosimerispacheco" target="_blank">Rosimeri Pacheco</a>.
+    </div>
+  </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
